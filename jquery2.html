@@ -11,9 +11,48 @@
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 	</head>
 	
+	<style>
+		
+		div{
+		background-color:gray;
+		height: 100px;
+		width: 100px;
+		position:absolute;
+		}
+		
+		#fadeindiv{
+			width: 80px;
+			height:80px;
+			display:none;
+			background-color:yellow;
+		
+		}
+		
+		#fadeindiv2{
+			width: 80px;
+			height:80px;
+			display:none;
+			background-color:red;
+		
+		}
+		
+		#fadeindiv3{
+			width: 80px;
+			height:80px;
+			display:none;
+			background-color:blue;
+		
+		}
+		
+		
+	</style>
+	
+	
 	<script>
+		
+		// JQUERY FUNCTION TO ADD CSS
 		$(document).ready(function(){
-			$("p").on({
+			$("h1").on({
 				mouseenter: function(){
 					$(this).css("background-color", "gray");
 				},
@@ -25,10 +64,83 @@
 				}
 			});
 		});
+		
+		//CLICK FUNCTION JQUERY
+		$(function(){
+			$("button.anima").click(function(){
+				$("div").animate({
+					left: "250px",
+					opacity:"0.01",
+					height: "150px",
+					width:"150px"
+				});
+			});
+		});
+		
+		//FADE IN EFFECT JQUERY
+		
+		$(function(){
+		
+			$("#boton").click(function(){
+				$("#fadeindiv").fadeIn();
+				$("#fadeindiv2").fadeIn("slow");
+				$("#fadeindiv3").fadeIn(4000);
+			});
+		});
+		
+		
+		//ESCODER CONTENT
+		
+		$(function(){
+			
+			
+			$("#esconde").click(function(){
+				
+				
+				$("p").hide(), function(){
+					alert("el parrafo fue escondido");
+					
+				});
+			
+				
+				
+				
+			});
+		
+		
+	
+		});
+		
 	</script>
 	
 	<body>
-		<p>Click o mover el mouse sobre este parrafo</p>
 		
+	<h1>Click o mover el mouse sobre este parrafo</h1>
+	
+	<hr>
+	
+	<button class="anima">Comenzar animacion</button>
+	
+	<p>Por defecto todos los elementos HTML son estaticos apra manipular su posicion, hay que utilizar la propiedad del css de position</p>
+	
+	<div></div>
+	
+	<hr>
+	
+	<button id="boton">Fade in effect</button>
+	
+	<div id="fadeindiv"></div>
+	
+	<div id="fadeindiv2"></div>
+	
+	<div id="fadeindiv3"></div>
+	
+	
+	<hr>
+	
+	<button id="esconde">Esconder</button>
+	
+	<p>Esto es un parrafo</p>
+	
 	</body>
 </html>
