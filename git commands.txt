@@ -2,4 +2,9 @@ git init
 
 git add .
 
-git commit -m ""
+git commit -m "tercer commit"
+
+git remote add origin https://github.com/David-Cyrman/GitClassUlacit.git
+
+git push origin master
+=========================================
