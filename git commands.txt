@@ -2,7 +2,7 @@ git init
 
 git add .
 
-git commit -m "tercer commit"
+git commit -m "cuarto commit"
 
 git remote add origin https://github.com/David-Cyrman/GitClassUlacit.git
 
